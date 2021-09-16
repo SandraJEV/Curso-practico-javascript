@@ -1,63 +1,52 @@
-// Código del cuadrado
-console.group("Cuadrados");
-const ladoCuadrado = 5;
-console.log("Los lados del cuadrado miden: " + ladoCuadrado);
+//Cuadrados
+function perimetroCuadrado(lado) {
+  const perimetro = lado * 4;
+  return perimetro;
+}
 
-const perimetroCuadrado = ladoCuadrado * 4;
-// PC = L + L + L + l
-console.log("El perimetro del cuadrado es: " + perimetroCuadrado + " cm");
-const areaCuadrado = ladoCuadrado * ladoCuadrado;
-// AC = l al cuadrado
-console.log("El área del cuadrado es: " + areaCuadrado + " cm^2");
-console.groupEnd();
+function areaCuadrado(lado) {
+  const area = lado * lado;
+  console.log("El area del cuadrado es: " + area);
+}
 
-// Código del triángulo
-console.group("Triángulo");
-const ladoTriangulo1 = 6;
-const ladoTriangulo2 = 6;
-const baseTriangulo = 4;
+// Triangulos
+function perimetroTriangulo(lado, lado2, base) {
+  const perimetro = lado + lado2 + base;
+  return perimetro;
+}
 
-console.log(
-  "Los lados del triangulo miden " +
-    ladoTriangulo1 +
-    " cm," +
-    ladoTriangulo2 +
-    " cm, " +
-    baseTriangulo +
-    " cm"
-);
+function areaTriangulo(base, altura) {
+  const area = (base * altura) / 2;
+  return area;
+}
 
-const alturaTriangulo = 5.5;
-console.log("La altura del triángulo mide " + alturaTriangulo + " cm"); 
+//Triangulo isoceles
+function isosceles(lado1, lado2, base) {
+  if (lado1 === lado2 && base !== lado1) {
+      // const baseAl = base / 2;
+      // const baseMul = baseAl * baseAl;
+      // const lado1Al = lado1 * lado1;
+      // const altura = Math.sqrt(lado1Al - baseMul);
+      const altura = Math.sqrt(Math.pow(lado1,2) - (Math.pow(base,2) / 4))
+      return altura
+    
+  }
+  if (lado1 === lado2 && base === lado2) {
+    alert("No es un triangulo isosceles, es equilatero");
+  } else {
+    alert("No es un triangulo isosceles");
+  }
+}
+//circulo
 
-const perimetroTrian = ladoTriangulo1 + ladoTriangulo2 + baseTriangulo;
-console.log("El perimetro del triángulo es " + perimetroTrian + " cm");
-
-const areaTrian = (baseTriangulo * alturaTriangulo) / 2;  
-console.log("El área del triángulo es: " + areaTrian + " cm^2");
-
-console.groupEnd();
-
-// Código círculo
-console.group("Círculo");
-
-// Radio 
-const radioCir = 4;
-console.log("El radio del círculo es : " + radioCir + " cm");
-
-// Diámetro
-const diametroCir = radioCir * 2;
-console.log("El diámetro del círculo es : " + diametroCir + " cm");
-//Pi
-const PI = Math.PI;
-console.log("PI equivale a:" + PI);
-//Circuferencia
-const perimetroCir= diametroCir * PI;
-console.log("El perímetro del círculo es : " + perimetroCir + " cm");
-
-//Area 
-const areaCirc = (radioCir * radioCir) * PI;
-console.log("El área del círculo es : " + areaCirc + " cm^2");
-
-
-console.groupEnd();
+function circunferencia(radio) {
+  const diametro = radio + radio;
+  const PI = Math.PI;
+  const cirTotal = diametro * PI;
+  return cirTotal;
+}
+function areaCirculo(radio) {
+  const PI = Math.PI;
+  const area = radio ** 2 * PI;
+  return area;
+}
