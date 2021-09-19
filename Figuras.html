@@ -1,20 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Figuras Geométricas</title>
-</head>
-<style>
+  </head>
+  <style>
     .header {
-        color: blue;
- }
-</style>
-<body>
+      color: blue;
+    }
+  </style>
+  <body>
     <header class="header">
-    <h1>Figuras geométricas</h1>
+      <h1>Figuras geométricas</h1>
     </header>
+    <div>
+      <section>
+      <form action="">
+        <label for="inputPerimetroCuad">
+          <span>Para calcular el perímetro indica medida de un lado de tu cuadrado</span>
+          <input type="number" id="inputPerimetroCua">
+        </label>
+       <label for="areaCua">
+         <span>Para calcular el área indica medida de un lado de tu cuadrado</span>
+         <input type="number" id="inputAreaCuadrado">
+       </label>
+      </section>
+      <section>
+        <button type="button" onclick="calculaCuadradoPer()">Perímetro</button>
+        <button type="button" onclick="calculaCuadradoArea()">Área</button>
+      </section>
+      <section>
+        <p id="resultadoPerCua"></p>
+        <p id="resultadoAreCua"></p>
+      </section>
+      </form>
+    </div>
     <script src="figuras.js"></script>
-</body>
+  </body>
 </html>
