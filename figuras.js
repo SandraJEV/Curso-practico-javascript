@@ -44,12 +44,14 @@ function circunferencia(radio) {
   const diametro = radio + radio;
   const PI = Math.PI;
   const cirTotal = diametro * PI;
-  return cirTotal;
+  const cirTotalSin = cirTotal.toFixed(4)
+  return cirTotalSin;
 }
 function areaCirculo(radio) {
   const PI = Math.PI;
   const area = radio ** 2 * PI;
-  return area;
+  const areaSin = area.toFixed(4)
+  return areaSin;
 }
 
 
@@ -118,3 +120,12 @@ function calculaCirculoPer() {
   const resultadoPerCir = document.getElementById("resultadoPerCir");
   resultadoPerCir.innerText = "La circunferencia de tu círculo es " + calculo + "cm";
 }
+
+function calculaCirculoArea() {
+  const input = document.getElementById("inputCir");
+  const valor = Number(input.value);
+  const calculo = areaCirculo(valor);
+  const resultadoAreCir = document.getElementById("resultadoAreCir");
+  resultadoAreCir.innerText = "El área de tu círculo es " + calculo + "cm^2";
+}
+
