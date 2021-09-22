@@ -33,9 +33,9 @@ function isosceles(lado1, lado2, base) {
     
   }
   if (lado1 === lado2 && base === lado2) {
-    alert("No es un triangulo isósceles, es equilátero");
+    alert("No es un triángulo isósceles, es equilátero");
   } else {
-    alert("No es un triangulo isósceles, es escaleno");
+    alert("No es un triángulo isósceles, es escaleno");
   }
 }
 //circulo

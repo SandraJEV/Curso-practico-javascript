@@ -1,4 +1,4 @@
-function PrecioFinal(precio, descuento) {
+function precioFinal(precio, descuento) {
   const calculo = (precio * (100 - descuento)) / 100;
   return calculo;
 }
@@ -22,4 +22,15 @@ if (cupones === "Pagas menos") {
 }
 if (descuento === "Sorpresa") {
   descuento = 80;
+}
+
+
+function yaPrecio(){
+  const inputPrecio = document.getElementById("inputPrecio");
+  const inputDescuento = document.getElementById("inputDescuento");
+  const valorPrecio = inputPrecio.value;
+  const valorDescuento = inputDescuento.value;
+  const resultado = precioFinal(valorPrecio, valorDescuento);
+  const resultadoPrecio = document.getElementById("resultadoPrecio")
+  resultadoPrecio.innerText = "El precio con descuento es " + resultado + "$"
 }
