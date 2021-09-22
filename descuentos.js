@@ -3,34 +3,62 @@ function precioFinal(precio, descuento) {
   return calculo;
 }
 
-const cupones = [
-  "Primera compra",
-  "Cliente frecuente",
-  "Pagas menos",
-  "Sorpresa",
-];
+// const cupones = [
+//   "Primera compra",
+//   "Cliente frecuente",
+//   "Pagas menos",
+//   "Sorpresa",
+// ];
 
-let descuento;
-if (cupones === "Primera compra") {
-  descuento = 50;
-}
-if (cupones === "Cliente frecuente") {
-  descuento = 15;
-}
-if (cupones === "Pagas menos") {
-  descuento = 33;
-}
-if (descuento === "Sorpresa") {
-  descuento = 80;
-}
+// let descuento;
+
+// switch (cupones) {
+//   case "Primera compra":
+//       descuento = 15;
+//     break;
+//   case "Cliente frecuente":
+//       descuento = 34;
+//     break;
+//   case "Pagas menos":
+//       descuento = 5;
+//     break;
+//   case "Sorpresa":
+//       descuento = 25;
+//     break;
+//   default:
+//     alert("Ingresa un cupón válido")
+//     break;
+// }
+
+
 
 
 function yaPrecio(){
   const inputPrecio = document.getElementById("inputPrecio");
-  const inputDescuento = document.getElementById("inputDescuento");
+  const inputDescuento = document.getElementById("inputCupon");
   const valorPrecio = inputPrecio.value;
-  const valorDescuento = inputDescuento.value;
-  const resultado = precioFinal(valorPrecio, valorDescuento);
+  const valorCupon = inputDescuento.value;
+  
+  let descuento;
+  
+  switch (valorCupon) {
+    case "Primera compra":
+      descuento = 15;
+    break;
+  case "Cliente frecuente":
+      descuento = 34;
+    break;
+    case "Pagas menos":
+      descuento = 5;
+      break;
+  case "Sorpresa":
+      descuento = 25;
+      break;
+      default:
+    alert("Ingresa un cupón válido")
+    break;
+  }
+  const resultado = precioFinal(valorPrecio, descuento);
   const resultadoPrecio = document.getElementById("resultadoPrecio")
   resultadoPrecio.innerText = "El precio con descuento es " + resultado + "$"
 }
